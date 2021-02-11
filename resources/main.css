@@ -30,12 +30,12 @@ header{
 .social-media-corner-wrapper div:first-child{
     font-family: 'Open Sans', sans-serif;
     font-size: 40px;
-    color: white;
+    color: #fff;
     margin-top: 30px;
     text-align: center;
 }
 .social-media-corner-wrapper div:nth-child(2){
-    border-left: 1px solid white;
+    border-left: 1px solid #fff;
     height: 40px;
     margin: 30px 0 0 40px;
 }
@@ -44,7 +44,7 @@ header{
     font-size: 40px;
     margin: 30px 0 0 30px;
     display: block;
-    color: white;
+    color: #fff;
 
 }
 .navigation-desktop{
@@ -55,7 +55,17 @@ header{
     flex-grow: 1;
 }
 .navigation-mobile{
+    height: 100px;
     display: none;
+    flex-grow: 1;
+    text-align: right;
+    padding: 20px;
+   
+}
+.navigation-mobile a{
+   
+    font-size: 50px;
+    color:#fff;
 }
 .navigation-list{
     list-style: none;
@@ -68,7 +78,7 @@ header{
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    color: white;
+    color: #fff;
 }
 h1{
     /* border: 2px solid white; */
@@ -76,7 +86,7 @@ h1{
     font-size: 80px;
     font-weight: 100;
     letter-spacing: 15px;
-    color: white;
+    color: #fff;
     text-transform: uppercase;
     line-height: 100px;
     position: absolute;
@@ -84,46 +94,20 @@ h1{
     right: 70px;
 }
 main{
-    border: 2px solid red;
     width: 100%;
     height: 100vh;
     position: relative;
 }
-/* .background-wrapper{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(43,43,43,0.5);
-} */
-/* .text-wrapper{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 100;
-    color: white;
-    display: flex;
-} */
 .projects-wrapper{
-    border: 2px solid black;
     width: 100%;
     height: 50vh;
     display: flex;
 }
 
 .projects-wrapper div{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     flex-grow: 1;   
 }
-/* .projects-wrapper div.text-description{
-    border: 2px solid yellow;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 20px;
-        color: white;
-        text-transform: uppercase;
-}
-.projects-wrapper div.text-description span{
-    display: block;
-} */
 .first-row>div:first-child{
     background-image: url(../assets/concert-hall.jpg);
     background-size: cover;
@@ -196,7 +180,7 @@ main{
     transform: rotate(-90deg); 
   }
 .bottom-wrapper{
-    border: 2px solid fuchsia;
+    padding: 1px;
     width: 100%;
     height: 100vh;
     background-color: #2b2b2b;
@@ -207,8 +191,7 @@ main{
     margin: 0 auto;
     display: block;
     border-radius: 30px;
-    border: none;
-    
+    border: none;   
 }
 .btn.more-projects{
     background-color: #3b3b3b;
@@ -243,12 +226,14 @@ form{
     margin: 0 100px;
 }
 .form-content{
-    border: 2px solid white;
+    /* border: 2px solid white; */
     height: 80%;
     position: relative;
 }
+
+/* Cred ca aici ar mai trebui sa lucrez la pozitionare */
 .inputs-wrapper{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 70%;
     margin: 10px auto;
 }
@@ -263,6 +248,8 @@ form{
     background-color: #3b3b3b;
     border: none; 
     color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
 }
 
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -286,6 +273,8 @@ input::-ms-input-placeholder { /* IE 10+ */
     background-color: #3b3b3b;
     border: none;
     color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
    
 }
 textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -308,4 +297,92 @@ input::-ms-input-placeholder { /* IE 10+ */
     padding-left: 10px;
     color: #fff;
     font-size: 15px;
+}
+
+
+@media(max-width: 599px){
+    .social-media-corner-wrapper{
+        width: 50%;
+    }
+    .navigation-desktop{
+        display: none;
+    }
+    .navigation-mobile{
+        display: block;
+    }
+    h1{
+        width: 100%;
+        text-align: center;
+        line-height: 250px;
+        font-size: 50px;
+        right: 0;
+        font-weight: 400;
+    }
+    main{
+        height: 200vh;
+    }
+    .projects-wrapper{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .description{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 150px;
+        font-size: 30px;
+    }
+    .text-description{
+        width: auto;      
+    }
+    .text-description span{
+        display: inline-block;
+        color: #c09c78;
+    } 
+    .text-category{
+        position: relative;
+        width: auto;
+        transform: none;
+        line-height: 50px;
+    }
+    .btn.more-projects{
+        display: none;
+    }
+    .bottom-wrapper h2{
+        font-size: 30px;
+        margin: 40px 0;
+    }
+    form{
+        height: 65vh;
+    }
+    .form-wrapper{
+        margin: 0;
+    }
+    .form-content{
+        height: 100%;;
+    }
+    .inputs-wrapper{
+        width: 90%;
+        height: 86%;
+        position: relative;
+    }
+    .form-content input{
+        width: 90%;
+        height: 45px;
+        margin: 10px;
+    }
+    .form-content textarea{
+        bottom: 10px;
+        left: 10px;
+        width: 90%;
+    
+    }
+    .btn.send{
+        position: absolute;
+        right: 20px;
+        width: 150px;
+        height: 50px;
+
+    }
 }
