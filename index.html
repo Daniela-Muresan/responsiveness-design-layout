@@ -19,8 +19,6 @@
                         <div class="social-media-corner-wrapper">
                             <div>go.arch</div>
                             <div class="line"></div>
-                            <!-- Nu sunt sigura daca ai vrut sa folosim iconita de la instagram. Observ ca iconita pusa de mine este diferita decat cea din imagine -->
-                            <!-- poti sa folosesti ce vrei tu in acest caz. in cazul unui client daca are preferinta e de dorit sa folosesti ce recomanda el, altfel decizi tu -->
                             <i class="fab fa-instagram"></i>
                             <i class="fab fa-facebook-f"></i>
                         </div>
@@ -42,7 +40,7 @@
                 </header>
 
                 <main>
-                    <!-- acestea puteau sa apartina unui container fara sa separi tu manual pe randuri. in cazul in care continutule ste dinamic si va fi adaugat ca atare in pagina toata logica va trebui facuta manual -->
+                <div class="main-container-wrapper">
                     <div class="projects-wrapper first-row">
                         <div class="image-wrapper">
                             <div class="description">
@@ -106,7 +104,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>                   
+                    </div>  
+                </div>                 
                 </main>
                 <div class="bottom-wrapper">
                     <button class="btn more-projects">
@@ -118,25 +117,31 @@
                         <div class="form-wrapper">
                             <div class="form-content">
                                 <div class="inputs-wrapper">
-                                    <label for="FName"></label>
-                                    <input type="text" name="fName-Input" id="FName" minlength="3" placeholder="Name">
+                                    <div class="column">
+                                        <label for="FName"></label>
+                                        <input type="text" name="fName-Input" id="FName" minlength="3" placeholder="Name">
 
-                                    <label for="Phone-No"></label>
-                                    <input type="tel" name="phone-Input" id="Phone-No" placeholder="Phone">
-                                    
-                                    <label for="Message"></label>
-                                    <textarea id="Message" minlength="50" maxlength="250" placeholder="Message"></textarea>
+                                        <label for="Email"></label>
+                                        <input type="email" name="email-Input" id="Email" placeholder="Email">
+                                    </div>
+                                    <div class="column">
+                                        <label for="Phone-No"></label>
+                                        <input type="tel" name="phone-Input" id="Phone-No" placeholder="Phone">
 
-                                    <label for="Email"></label>
-                                    <input type="email" name="email-Input" id="Email" placeholder="Email">
-
-                                    <label for="Company"></label>
-                                    <input type="text" name="Company-Input" id="Company" minlength="3" placeholder="Company">
+                                        <label for="Company"></label>
+                                        <input type="text" name="Company-Input" id="Company" minlength="3" placeholder="Company">
+                                    </div>
+                                    <div class="column">
+                                        <label for="Message"></label>
+                                        <textarea id="Message" minlength="50" maxlength="250" placeholder="Message"></textarea>
+                                    </div>                  
                                 </div>
-                                <button type="submit" class="btn send" >
-                                    <a href="#">Send</a>
-                                    <i class="fas fa-arrow-right"></i>
-                                </button>     
+                                <div class="btn-wrapper">
+                                    <button type="submit" class="btn send" >
+                                        <a href="#">Send</a>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>   
+                                </div>  
                             </div>  
                                                    
                         </div>
